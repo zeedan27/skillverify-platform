@@ -1,0 +1,23 @@
+{
+  "name": "skillverify-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run start:backend\" \"npm run start:frontend\"",
+    "build:shared": "npm --workspace=shared run build",
+    "start:backend": "npm --workspace=backend run start:dev",
+    "start:frontend": "npm --workspace=frontend run dev",
+    "build": "npm --workspace=shared run build && npm --workspace=backend run build && npm --workspace=frontend run build",
+    "verify:db": "node scripts/verify-db.js",
+    "verify:storage": "node scripts/verify-storage.js",
+    "seed": "node scripts/seed.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

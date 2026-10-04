@@ -1,0 +1,22 @@
+{
+  "short_name": "SkillVerify",
+  "name": "SkillVerify — Skill Gate Verified Hiring",
+  "description": "Skill-verified job applications, grooming courses, and certified digital CVs.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "display": "standalone",
+  "orientation": "portrait"
+}
